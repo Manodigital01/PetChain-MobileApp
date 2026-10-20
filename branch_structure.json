@@ -1,0 +1,18 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "feat/issue-1139-mobile-add-longitudinal-allergy-and-reaction",
+    "main",
+    "origin"
+  ],
+  "parent": {
+    "feat/issue-1139-mobile-add-longitudinal-allergy-and-reaction": "main",
+    "main": null,
+    "origin": "main"
+  },
+  "order": [
+    "main",
+    "feat/issue-1139-mobile-add-longitudinal-allergy-and-reaction",
+    "origin"
+  ]
+}

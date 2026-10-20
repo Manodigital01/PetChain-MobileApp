@@ -1,7 +1,7 @@
 {
   "name": "petchain-mobile",
   "version": "1.0.0",
-  "description": "PetChain — Secure pet health records, medication reminders, QR scanning, and emergency SOS, all powered by blockchain verification.",
+  "description": "PetChain \u2014 Secure pet health records, medication reminders, QR scanning, and emergency SOS, all powered by blockchain verification.",
   "author": "PetChain, Inc. <support@petchain.app> (https://petchain.app)",
   "homepage": "https://petchain.app",
   "repository": {
@@ -24,9 +24,9 @@
     "stellar"
   ],
   "scripts": {
-    "start": "APP_ENV=development expo start",
-    "start:staging": "APP_ENV=staging expo start",
-    "start:production": "APP_ENV=production expo start",
+    "start": "node init && APP_ENV=development expo start",
+    "start:staging": "node init && APP_ENV=staging expo start",
+    "start:production": "node init && APP_ENV=production expo start",
     "eas:build:dev": "eas build --platform all --profile development",
     "eas:build:preview": "eas build --platform all --profile preview",
     "eas:build:staging": "eas build --platform all --profile staging",
@@ -41,7 +41,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "e2e:test": "maestro test .maestro/flows/smoke-test.yaml",
-    "e2e:journeys": "detox test --config-path .detoxrc.js --testNamePattern '^Journey — '",
+    "e2e:journeys": "detox test --config-path .detoxrc.js --testNamePattern '^Journey \u2014 '",
     "deps:check": "tsx scripts/check-dependency-compat.ts",
     "deps:check:licenses": "tsx scripts/check-dependency-compat.ts --licenses",
     "deps:check:compat": "tsx scripts/check-dependency-compat.ts --compat",
@@ -64,7 +64,7 @@
     "seed:test": "ts-node backend/seeds/index.ts --cleanup --owners 2 --vets 1 --pets 1 --records 1 --appointments 1 --medications 1",
     "seed:large": "ts-node backend/seeds/index.ts --owners 20 --vets 10 --pets 3 --records 5 --appointments 3 --medications 2",
     "server": "tsx backend/server/index.ts",
-    "dev:docker": "docker-compose up",
+    "dev:docker": "node init && docker-compose up",
     "audit:high": "npm audit --audit-level=high",
     "storybook:ci": "npx sb-rn-get-stories"
   },
